@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register Modals</title>
+
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #c7e7e5;
+      color: #333;
+      /* display: flex;
+  justify-content: center;
+  align-items: center;*/
+      height: 100vh;
+      margin: 0;
+    }
+
+
+
+    .headerheader {
+      background-color: white;
+      width: 100%;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      /* background-color: var(--white); */
+      display: flex;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      box-shadow: var(--box-shadow);
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -0px;
+      border-radius: 5px;
+
+    }
+
+
+
+    .imglogo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      margin-left: 15px;
+      margin-top: 8px;
+    }
+
+
+
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #333; */
+      /* padding: 1rem; */
+      width: 100%;
+    }
+
+
+
+
+    .div1 {
+      display: flex;
+      list-style: none;
+
+
+    }
+
+
+
+
+
+    .subdiv1 {
+      justify-content: space-between;
+
+
+    }
+
+
+    .anchor {
+      text-decoration: none;
+      margin-left: 30px;
+      color: black;
+      /* background-color: green; */
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+
+    }
+
+    .div1 .subdiv1 .anchor:hover {
+      background-color: #1ea159;
+      color: white;
+      /* Change this to your desired text color on hover */
+      border-radius: 10px;
+
+
+    }
+
+    .myinfo {
+      display: flex;
+      margin-top: 150px;
+
+    }
+
+
+    .myinfo1 {
+      margin-left: 200px;
+    }
+
+
+    .myinfo2 {
+      margin-left: 400px;
+    }
+
+
+    .font1 {
+      margin-left: 100px;
+      color: rgb(228, 186, 19);
+
+    }
+
+    .font2 {}
+
+
+    .font3 {
+      /* margin-left: 50px; */
+      margin-top: 5px;
+
+    }
+
+    .anchor {
+      text-decoration: none;
+
+    }
+
+
+    .btn {
+      border-radius: 15px;
+      width: 120px;
+      height: 30px;
+      margin-left: 35px;
+      margin-top: 20px;
+      background-color: #4bd187;
+
+    }
+
+    .myownimg {
+      height: 300px;
+      width: 200px;
+      border-radius: 50px;
+      margin-top: -50px;
+    }
+
+    .horizontal {
+      margin-top: 40px;
+
+
+    }
+
+
+    .Education {
+      margin-top: 20px;
+      margin-left: 40px;
+      display: flex;
+
+    }
+
+
+
+    .education1 {
+      width: 31%;
+      border-style: hidden;
+      margin-top: 20px;
+      background-color: #4bd187;
+      margin-left: 20px;
+      height: 90px;
+
+
+    }
+
+    .myeducation {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size: small;
+    }
+
+    .education2 {
+      margin-top: 20px;
+    }
+
+    .dot {
+      margin-left: 20px;
+    }
+
+    .education10 {
+      width: 31%;
+      border-style: hidden;
+      margin-top: 20px;
+      background-color: #4bd187;
+      margin-left: 20px;
+      height: 125px;
+    }
+
+    .education3 {
+      margin-top: 20px;
+      /* display: flex; */
+    }
+
+    .education11{
+      width: 31%;
+      border-style: hidden;
+      margin-top: 20px;
+      background-color: #4bd187;
+      margin-left: 20px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .education4{
+      margin-top: 20px;
+    }
+
+
+
+
+
+
+
+    .contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+
+
+
+
+
+
+.btn1{
+  /* color:#1ea159; */
+  background-color: #1ea159;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+  <section class="headerheader">
+
+    <div class="mainlogo">
+      <img class="imglogo" src="logocharity .jpg">
+    </div>
+
+
+    <nav class="navbar">
+      <div class="navbar1">
+        <ul class="div1">
+          <li class="subdiv1">
+            <a class="anchor" href="#">Home</a>
+          </li>
+          <li class="subdiv1">
+            <a class="anchor" href="#myinformation">My Info</a>
+          </li>
+    
+         
+          <li class="subdiv1">
+            <a class="anchor" href="#myeducation">Education</a>
+          </li>
+          <li class="subdiv1">
+            <a class="anchor" href="#myskills">Skills</a>
+          </li>
+          <li class="subdiv1">
+            <a class="anchor" href="#myprojects">My Projects</a>
+          </li>
+          <li class="subdiv1">
+            <a class="anchor" href="#contact">Contact With me </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+
+  <main class="myinfo" id="myinformation">
+    <div class="myinfo1">
+      <h2 class="font1">Hello,</h2>
+      <h2 class="font2">I am Sanjog Anilrao Magar</h2>
+      <h4 class="font3">Web Developer</h4>
+      <a href="#contact" class="anchor"><button class="btn">Contact With Me</button></a>
+    </div>
+
+    <div class="myinfo2">
+      <img src="Sanjog.jpg" alt="My intro" class="myownimg">
+    </div>
+  </main>
+
+
+
+  <hr class="horizontal">
+
+
+  <section  id="myeducation">
+
+    <h2 class="myeducation">My Education</h2>
+
+    <div class="Education">
+
+
+
+      <div class="education1">
+        <div class="education2">
+
+          <h4>Third Year IT </h4>
+          <p>Hey I am Studying in Third Year IT in Dr. Babasaheb Ambdekar Technological University Lonere</p>
+        </div>
+      </div>
+
+      <div class="education1">
+        <div class="education2">
+
+          <h4>12th </h4>
+          <p>I have completed 12th with 92% marks in Nutan Mahavidhalaya Selu District Parbhani.</p>
+        </div>
+      </div>
+
+      <div class="education1">
+        <div class="education2">
+
+          <h4>10th</h4>
+          <p>I have completed 10th with 85% marks in Dyantirth Vidhalya Selu District Parbhani</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <hr class="horizontal">
+
+  <section id="myskills">
+
+    <h2 class="myeducation">My Skills</h2>
+
+    <div class="Education">
+
+
+
+      <div class="education10">
+        <div class="education3">
+
+          <h4>Web Development </h4>
+
+
+          <div class="A" style="display: flex;">
+            <div class="AA" style="margin-top: 10px;">
+          <ul class="dot">
+            <li>
+              HTML
+            </li>
+            <li>
+              CSS
+            </li>
+            <li>
+              JAVASCRIPT
+            </li>
+          </ul>
+        </div>
+    
+
+      <div class="AB" style="margin-left: 20px; margin-top: 10px;" >
+        <ul class="dot">
+          <li>
+            SQL
+          </li>
+          
+          <li>
+             JAVA
+          </li>
+          <li>
+            PHP
+          </li>
+          <li>
+            SPRING BOOT
+          </li>
+        </ul>
+      </div>
+    </div>
+
+</div>
+
+
+
+        </div>
+      
+
+      <div class="education10">
+        <div class="education3">
+
+          <h4>Flutter </h4>
+          <div class="AA" style="margin-top: 10px;">
+            <ul class="dot">
+              <li>
+                DART
+              </li>
+              <li>
+                BASIC FLUTTER
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="education10">
+        <div class="education3">
+
+          <h4>Others Skills</h4>
+          <div class="AA" style="margin-top: 10px;">
+            <ul class="dot">
+              <li>
+                DSA IN JAVA
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <hr class="horizontal">
+
+  <section id="myprojects">
+
+    <h2 class="myeducation">My Projects</h2>
+
+    <div class="Education">
+
+
+
+     
+
+      <div class="education11">
+        <div class="education4">
+
+          <h4>My Projects list </h4>
+          <div class="AA" style="margin-top: 10px;">
+            <ul class="dot">
+              <li>
+                E-kart Website 
+              </li>
+              <li>
+                Travel Website 
+              </li>
+              <li>
+                Flipkart Clone 
+              </li>
+              <li>
+                Charity Connect Website 
+              </li>
+
+              <li>
+                Chatrapati Biography For Educational website
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+        
+
+     
+
+
+   
+  </section>
+
+  <hr class="horizontal">
+
+
+
+  <div class="contact-form" id="contact">
+    <form action="" id="contact-form">
+      <h2>Send Message</h2>
+      <div class="input-box">
+        <input type="text" required="true" name="">
+        <span>Full Name</span>
+      </div>
+      
+      <div class="input-box">
+        <input type="email" required="true" name="">
+        <span>Email</span>
+      </div>
+      
+      <div class="input-box">
+        <textarea required="true" name=""></textarea>
+        <span>Type your Message...</span>
+      </div>
+      
+      <div class="input-box">
+        <input type="submit" value="Send" name="" class="btn1">
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
